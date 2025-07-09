@@ -70,9 +70,9 @@ const Carousel = () => {
               <h2 className="text-lg sm:text-2xl md:text-2xl font-base font-poppins mb-2">{slide.title}</h2>
               <a
                 href={slide.link}
-                className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm sm:text-base"
+                className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-white text-red-500 rounded-md hover:bg-gray-200 transition-colors text-sm sm:text-base"
               >
-                Learn More
+                Discover More
               </a>
             </div>
           </div>
