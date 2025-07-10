@@ -1,124 +1,86 @@
-import { Menu } from "@/app/types/menu";
+export interface Menu {
+  id: number;
+  title: string;
+  path?: string;
+  sectionId?: string;
+  newTab: boolean;
+  submenu?: Menu[];
+}
 
 const menuData: Menu[] = [
-  // {
-  //   id: 1,
-  //   title: "Home",
-  //   path: "/",
-  //   sectionId:"home",
-  //   newTab: false
-  // },
-
+  {
+    id: 1,
+    title: "About",
+    path: "/about",
+    newTab: false,
+  },
   
-
-  {
-    id: 6,
-    title: " About",
-    path: "/industries" ,
-    sectionId:"feature",
-    newTab: false,
-  },
   {
     id: 2,
-    title: "Education & Training",
+    title: "Industrial Enginering",
     newTab: false,
-    
     submenu: [
-      
-      
+      // s
       {
-        id: 22,
-        title: "Training courses ",
-        path: "/dataanalytics",
+        id: 23,
+        title: "Feasibility Study",
+        path: "/ai",
         newTab: false,
-        
-      },
-
-      {
-        id: 22,
-        title: "Courses Delivery option",
-        path: "/database",
-        newTab: false,
-        
       },
       {
-        id: 22,
-        title: "Msc Dcyber sercurity",
-        path: "/database",
-        newTab: false,
-        
-      },
-
-
-    ],
-  },
-
- 
-
-  // {
-  //   id: 6,
-  //   title: "Security Awarness",
-  //   path: "/solution" ,
-  //   sectionId:"feature",
-  //   newTab: false,
-  // },
-  {
-    id: 6,
-    title: "Domain Name",
-    path: "/industries" ,
-    sectionId:"feature",
-    newTab: false,
-  },
-
- 
-  {
-    id: 2,
-    title: "Services",
-    newTab: false,
-    
-    submenu: [
-      
-      {
-        id: 22,
-        title: "It Services ",
+        id: 23,
+        title: "Technical Consultancy",
         path: "/itservice",
         newTab: false,
-        
       },
       {
-        id: 22,
-        title: "Cyber Security Services ",
-        path: "/dataanalytics",
+        id: 23,
+        title: "Industrial / Product Designing",
+        path: "/itservice",
         newTab: false,
-        
       },
       {
-        id: 22,
-        title: "ERP ",
-        path: "/dataanalytics",
+        id: 23,
+        title: "Prototyping",
+        path: "/itservice",
         newTab: false,
-        
       },
-
-      
-     
-
-
+      {
+        id: 23,
+        title: "Link to Manufacturing",
+        path: "/itservice",
+        newTab: false,
+      },
     ],
   },
-
   {
-    id: 6,
+    id: 2,
+    title: "IT Services",
+    newTab: false,
+    submenu: [
+      // s
+      {
+        id: 23,
+        title: "AI/ML",
+        path: "/ai",
+        newTab: false,
+      },
+      {
+        id: 23,
+        title: "IT service",
+        path: "/itservice",
+        newTab: false,
+      },
+    ],
+  },
+ 
+  
+  {
+    id: 3,
     title: "Contact",
-    path: "/contact" ,
-    sectionId:"contact",
+    path: "/contact",
     newTab: false,
   },
-  
-  
-  
-
-  
-
 ];
+
 export default menuData;

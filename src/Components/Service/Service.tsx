@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import { FollowerPointerCard } from "../ui/following-pointer";
+
 
 const blogContent1 = {
   slug: "react-performance-optimization",
@@ -25,7 +25,7 @@ const blogContent2 = {
 
 const FollowingPointerDemo = () => {
   return (
-    <div className='py-12'><h1 className="text-4xl md:text-4xl text-center">
+    <div className='py-12'><h1 className="text-4xl md:text-4xl text-center font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#0c7c94] to-gray-200">
    Our Comprehensive Technology Solutions
   </h1>
   <p className="text-base md:text-lg text-center text-slate-700 my-4 md:my-6 max-w-5xl mx-auto">
@@ -35,7 +35,7 @@ const FollowingPointerDemo = () => {
         
       {/* Card 1 */}
       <div className="w-full sm:w-1/2 max-w-sm mx-auto">
-        <FollowerPointerCard>
+      
           <div className="group relative h-full overflow-hidden rounded-2xl border border-zinc-100 bg-white transition duration-200 hover:shadow-xl">
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100">
               <img
@@ -54,16 +54,17 @@ const FollowingPointerDemo = () => {
               <div className="mt-10 flex flex-row items-center justify-between">
                 {/* <span className="text-sm text-gray-500">{blogContent1.date}</span> */}
                 <div className="relative z-10 block rounded-xl bg-black px-6 py-2 text-xs font-bold text-white">
-                  Read More
+                  <a href='/ai'>Read More</a>
+                  
                 </div>
               </div>
             </div>
           </div>
-        </FollowerPointerCard>
+      
       </div>
       {/* Card 2 */}
       <div className="w-full sm:w-1/2 max-w-sm mx-auto">
-        <FollowerPointerCard>
+       
           <div className="group relative h-full overflow-hidden rounded-2xl border border-zinc-100 bg-white transition duration-200 hover:shadow-xl">
             <div className="relative aspect-[16/10] w-full overflow-hidden rounded-tl-lg rounded-tr-lg bg-gray-100">
               <img
@@ -82,12 +83,12 @@ const FollowingPointerDemo = () => {
               <div className="mt-10 flex flex-row items-center justify-between">
                 {/* <span className="text-sm text-gray-500">{blogContent2.date}</span> */}
                 <div className="relative z-10 block rounded-xl bg-black px-6 py-2 text-xs font-bold text-white">
-                  Read More
+                <a href='/itservice'>Read More</a>
                 </div>
               </div>
             </div>
           </div>
-        </FollowerPointerCard>
+       
       </div>
     </div>
     </div>

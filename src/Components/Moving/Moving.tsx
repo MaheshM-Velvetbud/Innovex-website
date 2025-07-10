@@ -1,41 +1,64 @@
-"use client";
+"use client"
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
-import { row1 } from "./Enterprise";
-
+import { row1, row2 } from "./Enterprise"; 
 const Moving = () => {
+    
+    
   return (
+    
     <AppContainer>
-      <Wrapper>
-        <Text>Our Partners are Associated with</Text>
-        <Marquee>
-          <MarqueeGroup>
-            {row1.map((el, index) => (
-              <ImageGroup key={index}>
-                <Image src={el} alt={`Image ${index}`} />
-              </ImageGroup>
-            ))}
-          </MarqueeGroup>
-          <MarqueeGroup>
-            {row1.map((el, index) => (
-              <ImageGroup key={index}>
-                <Image src={el} alt={`Image ${index}`} />
-              </ImageGroup>
-            ))}
-          </MarqueeGroup>
-        </Marquee>
-      </Wrapper>
-    </AppContainer>
-  );
-};
+    <Wrapper>
+      <Text>Our Partners are Associated with
+      </Text>
+      {/* <Note>Revolutionize your Business with Our Advanced Technology Solutions</Note> */}
+      <Marquee>
+        <MarqueeGroup>
+  {row1.map((el, index) => (
+    <ImageGroup key={index}>
+      <Image src={el} alt={`Image ${index}`} />
+    </ImageGroup>
+  ))}
+</MarqueeGroup>
 
-export default Moving;
+<MarqueeGroup>
+  {row1.map((el, index) => (
+    <ImageGroup key={index}>
+      <Image src={el} alt={`Image ${index}`} />
+    </ImageGroup>
+  ))}
+</MarqueeGroup>
+
+      </Marquee>
+      <Marquee>
+      <MarqueeGroup2>
+  {row2.map((le, index) => (
+    <ImageGroup key={index}>
+      <Image src={le} alt={`Image ${index}`} />
+    </ImageGroup>
+  ))}
+</MarqueeGroup2>
+<MarqueeGroup2>
+  {row2.map((le, index) => (
+    <ImageGroup key={index}>
+      <Image src={le} alt={`Image ${index}`} />
+    </ImageGroup>
+  ))}
+</MarqueeGroup2>
+      </Marquee>
+    </Wrapper>
+  </AppContainer>
+);
+}
+
+export default Moving
+
 
 const AppContainer = styled.div`
   width: 100vw;
   height: 70vh;
   color: #000000;
-  overflow: hidden;
+ overflow:hidden;
   position: relative;
   display: flex;
   align-items: center;
@@ -45,6 +68,7 @@ const AppContainer = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   height: fit-content;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,17 +76,27 @@ const Wrapper = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
   margin-bottom: 10px;
   color: #02203c;
+  
 `;
+
+// const Note = styled.div`
+//   font-size: 18px;
+//   font-weight: 200;
+//   margin-bottom: 40px;
+//   color: dark blue;
+//   margin-left:40px;
+// `;
 
 const Marquee = styled.div`
   display: flex;
   width: 1200px;
   overflow: hidden;
   user-select: none;
+
   mask-image: linear-gradient(
     to right,
     hsl(0 0% 0% / 0),
@@ -94,6 +128,11 @@ const common = css`
 const MarqueeGroup = styled.div`
   ${common}
 `;
+const MarqueeGroup2 = styled.div`
+  ${common}
+  animation-direction: reverse;
+  animation-delay: -3s;
+`;
 
 const ImageGroup = styled.div`
   display: grid;
@@ -106,6 +145,7 @@ const Image = styled.img`
   object-fit: contain;
   width: 100%;
   height: 100%;
+  /* border: 1px solid black; */
   border-radius: 0.5rem;
   aspect-ratio: 16/9;
   padding: 5px 20px;

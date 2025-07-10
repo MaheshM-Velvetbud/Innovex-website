@@ -1,27 +1,29 @@
 "use client";
+
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const slides = [
+   
     {
-      src: 'https://t4.ftcdn.net/jpg/03/72/23/15/360_F_372231560_9xCCHPbhy1GDSkoVjlCW2pSHDKA7lEQk.jpg',
-      title: 'Build up your Cybersecurity Experience with our accredited professional qualifications',
-      description: 'Build up your Cybersecurity Experience with our accredited professional qualifications',
-      link: '/artistry',
+      src: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      title: 'Design & Prototype with Precision',
+      description: 'Create innovative, user-centered product designs and validate them with rapid prototyping to bring your ideas to life with precision and creativity.',
+      link: '/design-prototyping',
     },
     {
-      src: 'https://www.shutterstock.com/image-photo/man-cyber-data-team-monitoring-600nw-2576285941.jpg',
-      title: 'Full range of cyber security service',
-      description: 'Full range of cyber security service',
-      link: '/nature',
+      src: 'https://s3-ap-south-1.amazonaws.com/ricedigitals3bucket/AUPortalContent/2022/09/29160306/Number-Theory4.png',
+      title: 'Innovate with Technical Consultancy & AI/ML',
+      description: 'Drive business transformation with our expert technical consultancy and AI/ML solutions, leveraging predictive analytics, automation, and tailored strategies.',
+      link: '/technical-consultancy',
     },
     {
-      src: 'https://t4.ftcdn.net/jpg/03/72/23/15/360_F_372231560_9xCCHPbhy1GDSkoVjlCW2pSHDKA7lEQk.jpg',
-      title: 'Build up your Cybersecurity',
-      description: 'Experience the power and grace of the tiger in its forest home.',
-      link: '/wilderness',
+      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      title: 'Seamless Transition to Manufacturing',
+      description: 'Move from prototype to production with our strategic manufacturing solutions, sourcing machinery and ensuring market-ready success.',
+      link: '/manufacturing',
     },
   ];
 
@@ -68,9 +70,10 @@ const Carousel = () => {
             {/* Text overlay - Centered */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 sm:p-6 text-white text-center max-w-[90%] sm:max-w-[70%] md:max-w-[50%] z-20">
               <h2 className="text-lg sm:text-2xl md:text-2xl font-base font-poppins mb-2">{slide.title}</h2>
+              <p className="text-sm sm:text-lg md:text-lg font-poppins mb-4">{slide.description}</p>
               <a
                 href={slide.link}
-                className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-white text-red-500 rounded-md hover:bg-gray-200 transition-colors text-sm sm:text-base"
+                className="inline-block px-4 py-2 sm:px-6 sm:py-3 bg-white text-cyan-600 rounded-md hover:bg-gray-200 transition-colors text-sm sm:text-base"
               >
                 Discover More
               </a>
