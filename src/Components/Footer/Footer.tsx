@@ -9,25 +9,29 @@ const Footer = () => {
       <div className="bg-[#f8fafe] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-10 px-12 py-2 rounded-3xl items-center justify-center ">
         <div className="flex flex-col items-center lg:items-start gap-5">
           <img src="/Images/logo.png" alt="footer lgo" className="h-22 w-32" />
-          <p className="text-center lg:text-start">gwgdhg5</p>
+          <p className="text-center lg:text-start">Adrees of the INNOVEX company
+            768k AB street , building no 4
+          </p>
+        </div>
+       
+        <div className="flex flex-col items-center lg:items-start gap-2">
+          <p className="text-xl font-medium">Industrial Enginering</p>
+        
+          <p className="text-base">Technical  Counsultancy</p>
+          <p className="text-base">Product Designing</p>
+          <p className="text-base">Prototyping</p>
+          <p className="text-base">Linkto manufacturing</p>
+        </div>
+        <div className="flex flex-col items-center lg:items-start gap-2">
+          <p className="text-xl font-medium">IT Services</p>
+          <p className="text-base">AI & ML</p>
+          <p className="text-base">IT service</p>
         </div>
         <div className="flex flex-col items-center lg:items-start gap-2">
           <p className="text-xl font-medium">Company</p>
-          <p className="text-base">Careers</p>
-          <p className="text-base">Teachers</p>
-          <p className="text-base">Support</p>
+          <p className="text-base">About</p>
           <p className="text-base">Contact</p>
-        </div>
-        <div className="flex flex-col items-center lg:items-start gap-2">
-          <p className="text-xl font-medium">Product</p>
-          <p className="text-base">Courses</p>
-          <p className="text-base">Pricing</p>
-          <p className="text-base">Blog</p>
-        </div>
-        <div className="flex flex-col items-center lg:items-start gap-2">
-          <p className="text-xl font-medium">Legal</p>
-          <p className="text-base">Terms & Conditions</p>
-          <p className="text-base">Privacy policy</p>
+         
         </div>
         <div className="flex items-center gap-2">
                 <BsFacebook className="text-3xl text-blue-500"/>

@@ -37,7 +37,7 @@ const cardVariants: Variants = {
 const AboutUsPage = () => {
   return (
     <div
-      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat relative"
+      className="min-h-screen py-16 pt-32 px-4 sm:px-6 lg:px-8 bg-cover bg-center bg-no-repeat relative"
       style={{
         backgroundImage: `url('')`,
       }}
@@ -58,7 +58,9 @@ const AboutUsPage = () => {
             About Innovex
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-700">
-            Innovex is a leader in technical consultancy, industrial design, and manufacturing solutions, complemented by advanced IT and AI/ML services. We transform ideas into reality with innovative, tailored solutions that drive success.
+          INNOVEX is an industrial designing and technical consulting company. Our company specializes in Designing and Developing Products, Devices, Systems, Services, Industrial facilities, 3D modeling, and Prototyping.
+We create extraordinary experiences for clients and stakeholders in their industries. Our team-based organization is made up of the brightest product designers, engineers, and manufacturing specialists in Oman. We manage the entire design development cycle from innovation strategy, concept visualization, mockup, and prototyping to final engineering solutions. Our designs seamlessly combine brand values, user’s cultural influences, and a sense of progressiveness.
+
           </p>
         </motion.section>
 
@@ -75,7 +77,26 @@ const AboutUsPage = () => {
               Our Mission
             </h2>
             <p className="text-lg text-gray-700">
-              At Innovex, our mission is to empower businesses through technical consultancy, innovative product design, and seamless manufacturing processes. Combined with cutting-edge IT and AI/ML solutions, we deliver scalable, high-impact strategies that align with your vision and drive growth.
+            Guided by our vision we shall deliver high-quality, cost-effective projects on schedule and enhance our client’s satisfaction through continuous improvement of our business practices in terms of creativity, safety, quality, service delivery as well as sound environmental awareness policies
+            </p>
+          </div>
+        </motion.section>
+
+
+
+        <motion.section
+          variants={sectionVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-indigo-50 to-blue-100 rounded-2xl py-12 px-6 mb-16"
+        >
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+              Our Vision
+            </h2>
+            <p className="text-lg text-gray-700">
+            We see beyond problems and solutions. we see the insights as an opportunity to better human life.
             </p>
           </div>
         </motion.section>

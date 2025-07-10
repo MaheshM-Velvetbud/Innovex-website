@@ -35,7 +35,7 @@ const menuData: Menu[] = [
       },
       {
         id: 23,
-        title: "Industrial / Product Designing",
+        title: "Product Designing",
         path: "/itservice",
         newTab: false,
       },
