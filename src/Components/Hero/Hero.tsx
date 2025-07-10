@@ -14,7 +14,7 @@ const Carousel = () => {
       link: '/design-prototyping',
     },
     {
-      src: 'https://s3-ap-south-1.amazonaws.com/ricedigitals3bucket/AUPortalContent/2022/09/29160306/Number-Theory4.png',
+      src: '/Images/ML.jpg',
       title: 'Innovate with Technical Consultancy & AI/ML',
       description: 'Drive business transformation with our expert technical consultancy and AI/ML solutions, leveraging predictive analytics, automation, and tailored strategies.',
       link: '/technical-consultancy',
