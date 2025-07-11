@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import Footer from '@/Components/Footer/Footer';
+import OmanVision2040Section from '@/Components/Omanvision';
 
 // Company values or highlights
 const values = [
@@ -116,6 +117,7 @@ System: 3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r
             ))}
           </div>
         </motion.section>
+        <OmanVision2040Section/>
 
         {/* Mission Section */}
         <motion.section
@@ -163,7 +165,7 @@ System: 3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r
           className="max-w-7xl mx-auto mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-200 text-center mb-8">
-            Why Choose Innovex?
+          Choose Innovex for Futuristic Solutions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
@@ -183,6 +185,7 @@ System: 3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r
             ))}
           </div>
         </motion.section>
+       
 
         {/* Expertise Section */}
         <motion.section
@@ -205,7 +208,7 @@ System: 3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r
                 description: 'Our expert consultants provide tailored IT strategies, technology assessments, and roadmaps to drive efficiency and innovation.',
               },
               {
-                title: 'Industrial/Product Designing',
+                title: 'Industrial Designing',
                 description: 'We create user-centered, innovative designs that blend aesthetics and functionality for standout products.',
               },
               {
@@ -213,7 +216,7 @@ System: 3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r
                 description: 'Transform concepts into tangible prototypes with our rapid prototyping services, validating designs for production.',
               },
               {
-                title: 'Link to Manufacturing',
+                title: 'Manufacturing Expertise',
                 description: 'Move from prototype to production with strategic manufacturing solutions, sourcing machinery and ensuring market success.',
               },
               {

@@ -16,7 +16,7 @@ const values = [
     icon: '🎨',
   },
   {
-    title: 'Seamless Transition to Manufacturing',
+    title: 'Manufacturing Expertise',
     description: 'We bridge the gap from prototype to production, ensuring seamless manufacturing processes and market success.',
     icon: '🏭',
   },

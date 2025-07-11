@@ -14,11 +14,11 @@ const textVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut', delay: 0.2 } },
 };
 
-const buttonVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut', delay: 0.4 } },
-  hover: { scale: 1.1, transition: { duration: 0.3 } },
-};
+// const buttonVariants: Variants = {
+//   hidden: { opacity: 0, scale: 0.8 },
+//   visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut', delay: 0.4 } },
+//   hover: { scale: 1.1, transition: { duration: 0.3 } },
+// };
 
 // Particle animation keyframes
 const particleStyles = `
@@ -58,7 +58,7 @@ const OmanVision2040Section = () => {
       >
         <motion.h2
           variants={textVariants}
-          className="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-100 mb-4 mx-auto"
+          className="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-800 mb-4 mx-auto"
         >
           Oman Vision 2040
         </motion.h2>
@@ -68,7 +68,7 @@ const OmanVision2040Section = () => {
         >
           Oman Vision 2040 is the Sultanate’s gateway to overcome challenges keep pace with regional and global changes, generate and seize opportunities to foster economic competitiveness and social well-being, stimulate growth, and build confidence in all economic, social, and developmental relations nationwide.
         </motion.p>
-        <motion.a
+        {/* <motion.a
           href="/about"
           variants={buttonVariants}
           initial="hidden"
@@ -77,7 +77,7 @@ const OmanVision2040Section = () => {
           className="mt-6 inline-block bg-gray-500 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-full font-semibold hover:bg-black hover:text-[#6B46C1] transition-colors duration-300 mx-auto"
         >
           Learn About Our Alignment
-        </motion.a>
+        </motion.a> */}
       </motion.div>
     </div>
   );

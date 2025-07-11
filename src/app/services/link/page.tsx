@@ -1,7 +1,9 @@
 "use client"
 
 import React from 'react';
+import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
+import Footer from '@/Components/Footer/Footer';
 
 // Animation variants
 const heroVariants: Variants = {
@@ -26,6 +28,8 @@ const cardVariants: Variants = {
 
 const LinkToManufacturing = () => {
   return (
+    <>
+    
     <div
       className="min-h-screen py-16 pt-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
       style={{
@@ -50,12 +54,12 @@ const LinkToManufacturing = () => {
           <p className="mt-4 text-lg sm:text-xl text-gray-800 max-w-3xl mx-auto">
             Bridging the gap from prototype to production with strategic solutions for seamless manufacturing and market success.
           </p>
-          <a
-            href="/services"
-            className="mt-6 inline-block bg-[#0c7c94]text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-600 transition-colors duration-300"
+          <Link
+            href="/"
+            className="mt-6 inline-block bg-[#0c7c94] text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-600 transition-colors duration-300"
           >
             Back to Services
-          </a>
+          </Link>
         </motion.section>
 
         {/* Our Approach Section */}
@@ -193,6 +197,8 @@ const LinkToManufacturing = () => {
         </motion.section> */}
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

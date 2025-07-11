@@ -11,19 +11,19 @@ const Carousel = () => {
       src: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'Design & Prototype with Precision',
       description: 'Create innovative, user-centered product designs and validate them with rapid prototyping to bring your ideas to life with precision and creativity.',
-      link: '/design-prototyping',
+      link: '/services/industrial-designing',
     },
     {
       src: '/Images/ML.jpg',
       title: 'Innovate with Technical Consultancy & AI/ML',
       description: 'Drive business transformation with our expert technical consultancy and AI/ML solutions, leveraging predictive analytics, automation, and tailored strategies.',
-      link: '/technical-consultancy',
+      link: '/ai',
     },
     {
       src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
       title: 'Seamless Transition to Manufacturing',
       description: 'Move from prototype to production with our strategic manufacturing solutions, sourcing machinery and ensuring market-ready success.',
-      link: '/manufacturing',
+      link: '/services/link',
     },
   ];
 

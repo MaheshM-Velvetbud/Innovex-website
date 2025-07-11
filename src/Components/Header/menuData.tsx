@@ -56,7 +56,7 @@ const menuData: Menu[] = [
       },
       {
         id: 23,
-        title: "cyber security",
+        title: "Cyber security",
         path: "/services/cybersecurity",
         newTab: false,
       },

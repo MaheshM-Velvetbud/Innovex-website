@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 import Footer from '@/Components/Footer/Footer';
 
@@ -46,12 +47,12 @@ const Prototyping = () => {
           <p className="mt-4 text-lg sm:text-xl text-gray-800 max-w-3xl mx-auto">
             Transforming ideas into tangible prototypes with rapid iteration and precision to validate designs and accelerate innovation.
           </p>
-          <a
-            href="/services"
-            className="mt-6 inline-block bg-gray-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-500 transition-colors duration-300"
+          <Link
+            href="/"
+            className="mt-6 inline-block bg-gray-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-[#0c7c94]  transition-colors duration-300"
           >
             Back to Services
-          </a>
+          </Link>
         </motion.section>
 
         {/* Our Approach Section */}
@@ -159,7 +160,7 @@ const Prototyping = () => {
         </motion.section>
 
         {/* Why Choose Us Section */}
-        <motion.section
+        {/* <motion.section
           variants={heroVariants}
           initial="hidden"
           whileInView="visible"
@@ -180,7 +181,7 @@ const Prototyping = () => {
               <li>Fast turnaround for rapid market entry.</li>
             </ul>
           </div>
-        </motion.section>
+        </motion.section> */}
       </div>
     </div>
     <Footer/>
