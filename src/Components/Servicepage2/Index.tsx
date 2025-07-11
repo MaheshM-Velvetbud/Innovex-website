@@ -6,34 +6,28 @@ import { motion, Variants } from 'framer-motion';
 // Services data
 const services = [
   {
-    title: 'Technical Consultancy',
-    description: 'We generate tailored design and technical solutions to meet your project requirements, ensuring cost-effectiveness, high quality, and efficiency. Our team evaluates solutions to align with your needs before implementation.',
-    icon: '🛠️',
-  },
-  {
-    title: 'Industrial / Product Designing',
-    description: 'We design innovative concepts based on your demands, considering production cost, aesthetics, usability, and material choices. Our services include animation, physical, and digital analysis, with a focus on:',
-    subpoints: [
-      'Manufacturable products and parts design',
-      'Process-line and factories design',
-      'Machine selection design',
-    ],
+    title: 'Industrial Engineering',
+    description: 'We optimize complex systems and processes, enhancing efficiency, productivity, and sustainability in industrial operations. Our expertise includes process engineering, system design, and operational analysis.',
     icon: '🎨',
+    link: '/services/industrial-engineering',
   },
   {
-    title: 'Prototyping',
-    description: 'We transform designs into tangible prototypes to test and refine, ensuring the final product meets your requirements. Prototyping enhances quality and specifications through:',
-    subpoints: [
-      'Early error detection',
-      'Reduced time and costs',
-      'Improved user involvement',
-    ],
-    icon: '🔬',
+    title: 'IT Services',
+    description: 'Our IT services provide comprehensive solutions, including software development, cloud integration, and cybersecurity. We tailor our offerings to enhance your business’s technological capabilities and efficiency.',
+    icon: '💻',
+    link: '/services/itservice',
   },
   {
-    title: 'Link to Manufacturing',
-    description: 'Move your product from prototype to production with our strategic manufacturing solutions. We design a solid plan to bring your product to market, sourcing the right machinery suppliers, ensuring safe equipment delivery, and coordinating with suppliers for success.',
-    icon: '🏭',
+    title: 'Business Development',
+    description: 'We drive your business growth through strategic planning, market analysis, and partnership building. Our team helps you identify opportunities and develop actionable strategies to achieve your goals.',
+    icon: '📈',
+    link: '/services/business-development',
+  },
+  {
+    title: 'Training',
+    description: 'Our training programs empower your team with the skills and knowledge needed to excel. We offer customized workshops and courses in technical, leadership, and industry-specific domains.',
+    icon: '📚',
+    link: '/services/training',
   },
 ];
 
@@ -86,7 +80,7 @@ const ServicesPage = () => {
             Innovex Services
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
-            Empower your business with our innovative services, from technical consultancy to advanced prototyping, crafted to deliver exceptional results.
+            Empower your business with our innovative services, from industrial designing to comprehensive training, crafted to deliver exceptional results.
           </p>
         </motion.section>
 
@@ -120,13 +114,12 @@ const ServicesPage = () => {
                 {service.title}
               </h2>
               <p className="text-gray-100 text-sm sm:text-base mb-4">{service.description}</p>
-              {service.subpoints && (
-                <ul className="text-gray-100 list-disc list-inside text-sm sm:text-base">
-                  {service.subpoints.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              )}
+              <a
+                href={service.link}
+                className="inline-block bg-white text-black border border-gray-300 rounded-md px-4 py-2 text-sm sm:text-base hover:text-[#0c7c94] transition-colors duration-300"
+              >
+                Discover More
+              </a>
             </motion.div>
           ))}
         </motion.section>

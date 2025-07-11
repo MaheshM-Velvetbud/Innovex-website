@@ -16,7 +16,7 @@ const values = [
     icon: '🎨',
   },
   {
-    title: 'Manufacturing Expertise',
+    title: 'Seamless Transition to Manufacturing',
     description: 'We bridge the gap from prototype to production, ensuring seamless manufacturing processes and market success.',
     icon: '🏭',
   },
@@ -58,14 +58,14 @@ const AboutUsPage = () => {
             About Innovex
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-700">
-          INNOVEX is an industrial designing and technical consulting company. Our company specializes in Designing and Developing Products, Devices, Systems, Services, Industrial facilities, 3D modeling, and Prototyping.
-We create extraordinary experiences for clients and stakeholders in their industries. Our team-based organization is made up of the brightest product designers, engineers, and manufacturing specialists in Oman. We manage the entire design development cycle from innovation strategy, concept visualization, mockup, and prototyping to final engineering solutions. Our designs seamlessly combine brand values, user’s cultural influences, and a sense of progressiveness.
-
+          Innovex is a leading industrial design and technical consulting firm in Oman, delivering innovative solutions in Industrial Engineering, IT Services,Business Development,Prototyping, Cybersecurity ,Training Our expert team of designers, engineers, and specialists transforms ideas into reality, from concept to production, creating impactful experiences for clients and stakeholders. Aligned with Oman Vision 2040 we drive economic competitiveness and social well-being through cutting-edge design, technology, and strategic growth
           </p>
         </motion.section>
 
         {/* Mission Section */}
         <motion.section
+
+
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -77,14 +77,13 @@ We create extraordinary experiences for clients and stakeholders in their indust
               Our Mission
             </h2>
             <p className="text-lg text-gray-700">
-            Guided by our vision we shall deliver high-quality, cost-effective projects on schedule and enhance our client’s satisfaction through continuous improvement of our business practices in terms of creativity, safety, quality, service delivery as well as sound environmental awareness policies
+              Guided by our vision we shall deliver high-quality, cost-effective projects on schedule and enhance our client’s satisfaction through continuous improvement of our business practices in terms of creativity, safety, quality, service delivery as well as sound environmental awareness policies
             </p>
           </div>
         </motion.section>
 
-
-
-        <motion.section
+        {/* Vision Section */}
+        {/* <motion.section
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -96,10 +95,10 @@ We create extraordinary experiences for clients and stakeholders in their indust
               Our Vision
             </h2>
             <p className="text-lg text-gray-700">
-            We see beyond problems and solutions. we see the insights as an opportunity to better human life.
+            At Innovex, we harness insights and innovation to create transformative solutions that empower human progress, drive economic excellence, and contribute to a thriving, sustainable Oman by 2040.
             </p>
           </div>
-        </motion.section>
+        </motion.section> */}
 
         {/* Values Section */}
         <motion.section
@@ -110,7 +109,7 @@ We create extraordinary experiences for clients and stakeholders in their indust
           className="max-w-7xl mx-auto mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-200 text-center mb-8">
-            Why Choose Innovex?
+          Choose Innovex for Futuristic Solutions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
@@ -131,61 +130,20 @@ We create extraordinary experiences for clients and stakeholders in their indust
           </div>
         </motion.section>
 
-        {/* Expertise Section */}
+        {/* Discover More Link */}
         <motion.section
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="max-w-7xl mx-auto text-center"
+          className="text-center max-w-4xl mx-auto mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-200 mb-8">
-            Our Expertise
-          </h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
-            Innovex delivers a comprehensive suite of services, from technical consultancy and product design to manufacturing and advanced IT/AI solutions, all tailored to propel your business forward.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Technical Consultancy',
-                description: 'Our expert consultants provide tailored IT strategies, technology assessments, and roadmaps to drive efficiency and innovation.',
-              },
-              {
-                title: 'Industrial/Product Designing',
-                description: 'We create user-centered, innovative designs that blend aesthetics and functionality for standout products.',
-              },
-              {
-                title: 'Prototyping',
-                description: 'Transform concepts into tangible prototypes with our rapid prototyping services, validating designs for production.',
-              },
-              {
-                title: 'Link to Manufacturing',
-                description: 'Move from prototype to production with strategic manufacturing solutions, sourcing machinery and ensuring market success.',
-              },
-              {
-                title: 'IT Services',
-                description: 'Streamline operations with robust IT solutions, including infrastructure management, cybersecurity, and software development.',
-              },
-              {
-                title: 'AI/ML Solutions',
-                description: 'Leverage predictive analytics, NLP, and automation to transform data into actionable business insights.',
-              },
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="visible"
-                whileHover="hover"
-                viewport={{ once: true }}
-                className="bg-indigo-50 rounded-lg p-6 flex flex-col items-center text-center"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </motion.div>
-            ))}
-          </div>
+          <a
+            href="/about"
+            className="inline-block bg-[#0c7c94] text-white px-8 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-300"
+          >
+            Discover More About Us
+          </a>
         </motion.section>
       </div>
     </div>

@@ -17,38 +17,27 @@ const menuData: Menu[] = [
   
   {
     id: 2,
-    title: "Industrial Enginering",
+    title: "Industrial Engineering",
     newTab: false,
     submenu: [
       // s
       {
         id: 23,
-        title: "Feasibility Study",
-        path: "/ai",
+        title: "Industrial Designing",
+        path: "/services/industrial-designing ",
         newTab: false,
       },
-      {
-        id: 23,
-        title: "Technical Consultancy",
-        path: "/itservice",
-        newTab: false,
-      },
-      {
-        id: 23,
-        title: "Product Designing",
-        path: "/itservice",
-        newTab: false,
-      },
+      
       {
         id: 23,
         title: "Prototyping",
-        path: "/itservice",
+        path: "/services/prototyping",
         newTab: false,
       },
       {
         id: 23,
-        title: "Link to Manufacturing",
-        path: "/itservice",
+        title: "Manufacturing Expertise",
+        path: "/services/link",
         newTab: false,
       },
     ],
@@ -67,11 +56,23 @@ const menuData: Menu[] = [
       },
       {
         id: 23,
-        title: "IT service",
-        path: "/itservice",
+        title: "cyber security",
+        path: "/services/cybersecurity",
         newTab: false,
       },
     ],
+  },
+  {
+    id: 3,
+    title: "Business Development",
+    path: "/services/business-development",
+    newTab: false,
+  },
+  {
+    id: 3,
+    title: "Training",
+    path: "/services/training",
+    newTab: false,
   },
  
   
