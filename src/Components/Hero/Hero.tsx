@@ -20,7 +20,7 @@ const Carousel = () => {
       link: '/ai',
     },
     {
-      src: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
+      src: '/Images/enginerbg.jpg',
       title: 'Seamless Transition to Manufacturing',
       description: 'Move from prototype to production with our strategic manufacturing solutions, sourcing machinery and ensuring market-ready success.',
       link: '/services/link',

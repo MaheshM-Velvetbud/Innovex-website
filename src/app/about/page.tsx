@@ -28,22 +28,23 @@ const values = [
 // Leadership data
 const leadership = [
   {
-    name: 'Yaqeen Alkhathri',
-    title: 'Founder & CEO',
-    description: 'With over 20 years of experience in industrial design and technical consultancy, John leads Innovex with a vision for innovation and excellence, driving transformative solutions aligned with Oman Vision 2040.',
-    image: 'https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg',
-  },
-  {
     name: 'Riaz Ahmed',
     title: 'IT Consultant',
     description: 'As the founder of Innovex, Jane pioneered a human-centric approach to design and technology, building a legacy of creativity and progress that empowers industries across Oman.',
     image: 'https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg',
   },
   {
+    name: 'Yaqeen Alkhathri',
+    title: 'Founder & CEO',
+    description: 'With over 20 years of experience in industrial design and technical consultancy, John leads Innovex with a vision for innovation and excellence, driving transformative solutions aligned with Oman Vision 2040.',
+    image: '/Images/yaqeen.jpg',
+  },
+ 
+  {
     name: 'Muna Al Shukaili',
     title: 'Business Consultant',
     description: 'As the founder of Innovex, Jane pioneered a human-centric approach to design and technology, building a legacy of creativity and progress that empowers industries across Oman.',
-    image: 'https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg',
+    image: '/Images/muna.jpg',
   },
 ];
 
@@ -111,11 +112,11 @@ System: 3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r
                 viewport={{ once: true }}
                 className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center"
               >
-                {/* <img
+                <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-32 h-32 rounded-full mb-4 object-cover"
-                /> */}
+                  className="w-32 h-38 rounded-full mb-4 object-cover"
+                />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{leader.name}</h3>
                 <p className="text-indigo-600 font-medium mb-2">{leader.title}</p>
                 {/* <p className="text-gray-600">{leader.description}</p> */}

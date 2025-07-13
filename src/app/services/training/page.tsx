@@ -62,7 +62,7 @@ const Training = () => {
             href="/"
             className="mt-6 inline-block bg-cyan-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-cyan-300 transition-colors duration-300"
           >
-            Back to Services
+            Back to home
           </Link>
         </motion.header>
 

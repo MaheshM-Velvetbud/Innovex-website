@@ -76,7 +76,7 @@ const ServicesPage = () => {
           animate="visible"
           className="text-center mb-20"
         >
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-200">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0c7c94]">
             Innovex Services
           </h1>
           {/* <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">

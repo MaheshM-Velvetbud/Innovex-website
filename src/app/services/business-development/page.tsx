@@ -16,18 +16,18 @@ const contentVariants: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut', delay: 0.2 } },
 };
 
-// const cardVariants: Variants = {
-//   hidden: { opacity: 0,  },
-//   visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut', delay: 0.4 } },
-//   hover: { scale: 1.05, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)', transition: { duration: 0.3 } },
-// };
+const cardVariants: Variants = {
+  hidden: { opacity: 0,  },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut', delay: 0.4 } },
+  hover: { scale: 1.05, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)', transition: { duration: 0.3 } },
+};
 
 const BusinessDevelopment = () => {
   return (
     <>
     <div className="min-h-screen py-16 pt-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-100 to-gray-300 relative overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-[url('https://media.istockphoto.com/id/1339953021/photo/business-strategy-for-marketing-and-management.jpg?s=612x612&w=0&k=20&c=2srQpyzZAIv5YBlIkCitYxOKYIQZjia5ZCp3pqsdVtM=')] bg-cover opacity-10" />
+      <div className="absolute inset-0 bg-[url('/Images/businessdevelopmentbgimge.jpg')] bg-cover opacity-10" />
       
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Hero Section */}
@@ -37,7 +37,7 @@ const BusinessDevelopment = () => {
           animate="visible"
           className="text-center mb-16"
         >
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-800">
+          <h1 className="text-4xl sm:text-5xl font-extrabold  text-[#0c7c94] ">
             Business Development
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
@@ -71,7 +71,7 @@ const BusinessDevelopment = () => {
             </ul> */}
           </div>
 
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <motion.div
               variants={cardVariants}
               initial="hidden"
@@ -98,7 +98,7 @@ const BusinessDevelopment = () => {
                 Forge strategic alliances to enhance your market presence and operational capabilities.
               </p>
             </motion.div>
-          </div> */}
+          </div>
         </motion.section>
       </div>
     </div>

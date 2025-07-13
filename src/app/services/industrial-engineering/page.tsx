@@ -31,7 +31,7 @@ const IndustrialEngineering = () => {
     <div className="min-h-screen bg-gray-900 pt-32 text-white relative overflow-hidden">
       {/* Parallax background */}
       <div
-        className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158')] bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-[url('/Images/enginerbg.jpg')] bg-cover bg-center opacity-20"
         style={{
           backgroundAttachment: 'fixed',
           backgroundPosition: 'center',
@@ -47,7 +47,7 @@ const IndustrialEngineering = () => {
           animate="visible"
           className="text-center mb-20"
         >
-          <h1 className="text-5xl sm:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
+          <h1 className="text-5xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500">
             Industrial Engineering
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-cyan-200 max-w-3xl mx-auto">
@@ -57,7 +57,7 @@ const IndustrialEngineering = () => {
             href="/"
             className="mt-6 inline-block bg-cyan-500 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-cyan-300 transition-colors duration-300"
           >
-            Back to Services
+            Back to Home
           </Link>
         </motion.section>
 

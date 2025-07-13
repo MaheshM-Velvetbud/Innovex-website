@@ -63,13 +63,13 @@ const Header = () => {
       >
         <div className="container mx-auto px-8 xl:px-20">
           <div className="relative flex items-center justify-between">
-            <div className="w-24 pt-8 max-w-full">
+            <div className="w-38 pt-8 max-w-full">
               <Link
                 href="/"
                 className={`header-logo block w-full ${sticky ? "py-2 lg:py-2" : "py-8"}`}
               >
                 <Image
-                  src="/Images/logo.png"
+                  src="/Images/innovexlogo2.png"
                   alt="logo"
                   width={250}
                   height={90}
