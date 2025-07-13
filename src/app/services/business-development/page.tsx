@@ -16,11 +16,11 @@ const contentVariants: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut', delay: 0.2 } },
 };
 
-const cardVariants: Variants = {
-  hidden: { opacity: 0,  },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut', delay: 0.4 } },
-  hover: { scale: 1.05, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)', transition: { duration: 0.3 } },
-};
+// const cardVariants: Variants = {
+//   hidden: { opacity: 0,  },
+//   visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut', delay: 0.4 } },
+//   hover: { scale: 1.05, boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)', transition: { duration: 0.3 } },
+// };
 
 const BusinessDevelopment = () => {
   return (
@@ -59,19 +59,19 @@ const BusinessDevelopment = () => {
           className="space-y-12"
         >
           <div className="bg-white bg-opacity-90 backdrop-blur-md rounded-lg p-8 shadow-lg">
-            <h2 className="text-2xl font-semibold text-[#0c7c94] mb-4">Our Growth Strategies</h2>
+            {/* <h2 className="text-2xl font-semibold text-[#0c7c94] mb-4">Our Growth Strategies</h2> */}
             <p className="text-gray-700 text-base sm:text-lg">
-              We help you expand your business through data-driven strategies and market insights. Our services include:
+            At INNOVEX, our Business Development services are designed to help organizations grow with purpose, agility, and strategic clarity. We empower clients to expand their reach and impact through data-driven strategies, market insights, and tailored growth solutions. Our offerings include market research, competitive analysis, strategic partnership development, business model optimization, and growth opportunity identification — all aimed at unlocking new potential and driving sustainable success. Beyond growth strategies, we support Strategy & Organizational Development, helping businesses align their structure, culture, and goals for long-term resilience. We also guide Stakeholder Engagement & Communication to strengthen relationships and build trust across ecosystems. Committed to responsible progress, our team integrates ESG principles, sustainability frameworks, and social impact strategies to ensure that growth is not only profitable but also purposeful and future-ready.
             </p>
-            <ul className="mt-4 list-disc list-inside text-gray-700">
+            {/* <ul className="mt-4 list-disc list-inside text-gray-700">
               <li>Market research and competitive analysis</li>
               <li>Strategic partnership development</li>
               <li>Business model optimization</li>
               <li>Growth opportunity identification</li>
-            </ul>
+            </ul> */}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <motion.div
               variants={cardVariants}
               initial="hidden"
@@ -98,7 +98,7 @@ const BusinessDevelopment = () => {
                 Forge strategic alliances to enhance your market presence and operational capabilities.
               </p>
             </motion.div>
-          </div>
+          </div> */}
         </motion.section>
       </div>
     </div>

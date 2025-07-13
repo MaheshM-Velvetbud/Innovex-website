@@ -79,9 +79,9 @@ const ServicesPage = () => {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-200">
             Innovex Services
           </h1>
-          <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
+          {/* <p className="mt-4 text-lg sm:text-xl text-gray-700 max-w-2xl mx-auto">
             Empower your business with our innovative services, from industrial designing to comprehensive training, crafted to deliver exceptional results.
-          </p>
+          </p> */}
         </motion.section>
 
         {/* Timeline Section */}

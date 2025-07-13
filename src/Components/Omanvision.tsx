@@ -60,13 +60,13 @@ const OmanVision2040Section = () => {
           variants={textVariants}
           className="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-800 mb-4 mx-auto"
         >
-          Oman Vision 2040
+          OUR VISION
         </motion.h2>
         <motion.p
           variants={textVariants}
           className="text-sm sm:text-base lg:text-lg text-gray-800 max-w-2xl mx-auto text-center"
         >
-          Oman Vision 2040 is the Sultanate’s gateway to overcome challenges keep pace with regional and global changes, generate and seize opportunities to foster economic competitiveness and social well-being, stimulate growth, and build confidence in all economic, social, and developmental relations nationwide.
+         At INNOVEX, our Vision is to empower industries and organizations in Oman through innovative engineering, strategic consulting, and capability development. We are committed to driving sustainable progress by delivering integrated solutions in industrial engineering, IT services, business development, and professional training. By aligning our services with the pillars of Oman Vision 2040 — including economic diversification, human capital development, and sustainability — we strive to be a catalyst for transformation, helping businesses thrive in a future-ready Oman.
         </motion.p>
         {/* <motion.a
           href="/about"
@@ -79,6 +79,7 @@ const OmanVision2040Section = () => {
           Learn About Our Alignment
         </motion.a> */}
       </motion.div>
+      
     </div>
   );
 };

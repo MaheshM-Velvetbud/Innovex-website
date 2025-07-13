@@ -10,6 +10,12 @@ export interface Menu {
 const menuData: Menu[] = [
   {
     id: 1,
+    title: "Home",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 1,
     title: "About",
     path: "/about",
     newTab: false,
@@ -50,7 +56,7 @@ const menuData: Menu[] = [
       // s
       {
         id: 23,
-        title: "AI/ML",
+        title: "AI & ML",
         path: "/ai",
         newTab: false,
       },
