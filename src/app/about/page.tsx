@@ -28,17 +28,18 @@ const values = [
 // Leadership data
 const leadership = [
   {
-    name: 'Riaz Ahmed',
-    title: 'IT Consultant',
-    description: 'As the founder of Innovex, Jane pioneered a human-centric approach to design and technology, building a legacy of creativity and progress that empowers industries across Oman.',
-    image: 'https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg',
-  },
-  {
     name: 'Yaqeen Alkhathri',
     title: 'Founder & CEO',
     description: 'With over 20 years of experience in industrial design and technical consultancy, John leads Innovex with a vision for innovation and excellence, driving transformative solutions aligned with Oman Vision 2040.',
     image: '/Images/yaqeen.jpg',
   },
+  {
+    name: 'Riaz Ahmed',
+    title: 'IT Consultant',
+    description: 'As the founder of Innovex, Jane pioneered a human-centric approach to design and technology, building a legacy of creativity and progress that empowers industries across Oman.',
+    image: 'https://static.vecteezy.com/system/resources/thumbnails/001/840/612/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-free-vector.jpg',
+  },
+
  
   {
     name: 'Muna Al Shukaili',
@@ -96,32 +97,51 @@ const AboutUsPage = () => {
           viewport={{ once: true }}
           className="max-w-7xl mx-auto mb-16"
         >
-          <h2 className="text-3 HYPERLINK
-
-System: 3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-200 text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#0c7c94] to-gray-200 text-center mb-8">
             Our Leadership
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {leadership.map((leader, index) => (
+          <div className="flex flex-col gap-8">
+            {/* First Row: One Leader Centered */}
+            <div className="flex justify-center">
               <motion.div
-                key={index}
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
                 whileHover="hover"
                 viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center"
+                className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center w-full max-w-md"
               >
                 <img
-                  src={leader.image}
-                  alt={leader.name}
+                  src={leadership[0].image}
+                  alt={leadership[0].name}
                   className="w-32 h-38 rounded-full mb-4 object-cover"
                 />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{leader.name}</h3>
-                <p className="text-indigo-600 font-medium mb-2">{leader.title}</p>
-                {/* <p className="text-gray-600">{leader.description}</p> */}
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{leadership[0].name}</h3>
+                <p className="text-indigo-600 font-medium mb-2">{leadership[0].title}</p>
               </motion.div>
-            ))}
+            </div>
+            {/* Second Row: Two Leaders */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {leadership.slice(1).map((leader, index) => (
+                <motion.div
+                  key={index}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  whileHover="hover"
+                  viewport={{ once: true }}
+                  className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center"
+                >
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-32 h-38 rounded-full mb-4 object-cover"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{leader.name}</h3>
+                  <p className="text-indigo-600 font-medium mb-2">{leader.title}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.section>
         <OmanVision2040Section/>
