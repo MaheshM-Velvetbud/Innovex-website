@@ -1,7 +1,7 @@
 import Banner from "@/Components/Banner/Banner";
 import Contact from "@/Components/Contact/Contact";
 import Footer from "@/Components/Footer/Footer";
-import Header from "@/Components/Header";
+// import Header from "@/Components/Header";
 import Hero from "@/Components/Hero/Hero"
 // import Service from "@/Components/Service/Service"
 import Aboutmission from "@/Components/About/Aboutmission"
@@ -15,7 +15,7 @@ export default function Home() {
     <div className="font-[family-name:var(--font-geist-sans)]">
       
      <Hero/>
-     <Header/>
+    
     
      {/* <OmanVision2040/> */}
      <Aboutmission/>

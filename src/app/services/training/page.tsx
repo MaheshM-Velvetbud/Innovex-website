@@ -56,7 +56,7 @@ const Training = () => {
             Training Programs
           </h1>
           <p className="mt-4 text-lg sm:text-xl text-cyan-200 max-w-3xl mx-auto">
-            Empower your team with specialized training in industrial engineering, IT services, and business development, designed to drive innovation and align with Oman Vision 2040.
+            Elevate your workforce with cutting-edge training in IT, digital transformation, and business management, tailored to drive innovation and support Oman Vision 2040.
           </p>
           <Link
             href="/"
@@ -82,19 +82,64 @@ const Training = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: 'Industrial Engineering Training',
-                  description: 'Equip your team with skills in process optimization, lean manufacturing, and system design to enhance operational efficiency.',
-                  icon: '⚙️',
-                },
-                {
-                  title: 'IT Services Training',
-                  description: 'Master software development, cybersecurity, and cloud computing through hands-on workshops tailored to your IT needs.',
+                  title: 'Core Programming & Development',
+                  description: 'Master modern programming languages and frameworks to build robust, scalable applications.',
                   icon: '💻',
                 },
                 {
-                  title: 'Business Development Training',
-                  description: 'Develop strategic planning and market analysis skills to drive growth and build effective partnerships.',
+                  title: 'Microsoft Power Platform & Data Analytics',
+                  description: 'Leverage Power BI, Power Apps, and Power Automate for data-driven insights and automation.',
+                  icon: '📊',
+                },
+                {
+                  title: 'Oracle Ecosystem (Specialized Focus)',
+                  description: 'Deep dive into Oracle technologies for database management and enterprise solutions.',
+                  icon: '🗄️',
+                },
+                {
+                  title: 'System Administration & DevOps',
+                  description: 'Learn to manage IT infrastructure and streamline deployments with DevOps practices.',
+                  icon: '🛠️',
+                },
+                {
+                  title: 'Cybersecurity',
+                  description: 'Develop skills to protect systems and data from cyber threats with advanced security techniques.',
+                  icon: '🔒',
+                },
+                {
+                  title: 'Enterprise Resource Planning',
+                  description: 'Implement and optimize ERP systems to enhance business efficiency and integration.',
+                  icon: '🏢',
+                },
+                {
+                  title: 'Software Services',
+                  description: 'Explore software lifecycle management, from design to deployment, for seamless solutions.',
+                  icon: '⚙️',
+                },
+                {
+                  title: 'Business Intelligence',
+                  description: 'Transform data into actionable insights with advanced BI tools and strategies.',
                   icon: '📈',
+                },
+                {
+                  title: 'Cloud Computing',
+                  description: 'Master cloud platforms like AWS, Azure, and GCP for scalable, secure infrastructure.',
+                  icon: '☁️',
+                },
+                {
+                  title: 'IT Governance',
+                  description: 'Learn frameworks like ITIL and COBIT to align IT with business objectives.',
+                  icon: '📋',
+                },
+                {
+                  title: 'Digital Marketing',
+                  description: 'Boost brand presence with SEO, social media, and content marketing strategies.',
+                  icon: '📣',
+                },
+                {
+                  title: 'Professional Development & Business Management',
+                  description: 'Enhance leadership, strategic planning, and project management skills for business success.',
+                  icon: '👥',
                 },
               ].map((item, index) => (
                 <motion.div
@@ -105,7 +150,7 @@ const Training = () => {
                   whileInView="visible"
                   whileHover="hover"
                   viewport={{ once: true }}
-                  className="bg-gray-800 bg-opacity-80 rounded-full p-8 flex flex-col items-center text-center border border-cyan-500"
+                  className="bg-gray-800 bg-opacity-80 rounded-lg p-8 flex flex-col items-center text-center border border-cyan-500"
                 >
                   <div className="text-4xl mb-4">{item.icon}</div>
                   <h3 className="text-xl font-semibold text-cyan-400 mb-3">{item.title}</h3>
@@ -127,13 +172,13 @@ const Training = () => {
               Our Approach
             </h2>
             <p className="text-gray-300 text-base sm:text-lg max-w-4xl mx-auto text-center">
-              At Innovex, our training programs are designed to deliver practical, industry-relevant skills through a customized, hands-on approach. We align our content with your business goals and Oman Vision 2040, ensuring measurable outcomes.
+              At Innovex, our training programs deliver practical, industry-aligned skills through a tailored, hands-on approach. We align with your business objectives and Oman Vision 2040 to drive measurable results.
             </p>
             <ul className="mt-6 list-disc list-inside text-gray-300 max-w-4xl mx-auto space-y-2">
-              <li>Assessment: Identify your team’s skill gaps and business needs.</li>
-              <li>Customization: Tailor programs to address specific industry challenges.</li>
-              <li>Delivery: Engage participants with interactive workshops and real-world scenarios.</li>
-              <li>Support: Provide ongoing resources to ensure skill application and success.</li>
+              <li>Assessment: Evaluate your team’s skill gaps and organizational goals.</li>
+              <li>Customization: Design programs to tackle specific industry challenges.</li>
+              <li>Delivery: Engage learners with interactive workshops and real-world scenarios.</li>
+              <li>Support: Provide ongoing resources to ensure successful skill application.</li>
             </ul>
           </motion.section>
 
@@ -151,16 +196,16 @@ const Training = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  title: 'Industrial Efficiency Workshop',
-                  description: 'Trained a manufacturing team in lean principles, reducing waste by 25% and improving production efficiency.',
+                  title: 'Digital Transformation with Microsoft Power Platform',
+                  description: 'Trained a team to leverage Power Apps and Power BI, improving operational efficiency by 30%.',
                 },
                 {
-                  title: 'Cybersecurity Training Program',
-                  description: 'Equipped an IT team with advanced cybersecurity skills, reducing security incidents by 40%.',
+                  title: 'Cybersecurity Enhancement Program',
+                  description: 'Equipped an IT department with advanced cybersecurity skills, reducing vulnerabilities by 45%.',
                 },
                 {
-                  title: 'Strategic Growth Training',
-                  description: 'Empowered a sales team with market analysis skills, leading to a 15% increase in partnerships.',
+                  title: 'Cloud Migration Workshop',
+                  description: 'Guided a company through AWS adoption, cutting infrastructure costs by 20%.',
                 },
               ].map((caseStudy, index) => (
                 <motion.div
@@ -179,31 +224,6 @@ const Training = () => {
               ))}
             </div>
           </motion.section>
-
-          {/* Why Choose Us Section */}
-          {/* <motion.section
-            variants={sectionVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="mb-20"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-cyan-400 text-center mb-8">
-              Why Choose Innovex Training?
-            </h2>
-            <div className="text-gray-300 text-base sm:text-lg max-w-4xl mx-auto text-center">
-              <p>
-                Innovex’s training programs are crafted to empower your team with the skills needed to excel in industrial engineering, IT services, and business development. We offer:
-              </p>
-              <ul className="mt-6 list-disc list-inside space-y-2">
-                <li>Industry-specific curricula aligned with Oman’s industrial and technological goals.</li>
-                <li>Expert instructors with extensive experience in their fields.</li>
-                <li>Interactive, hands-on learning environments for maximum engagement.</li>
-                <li>Continuous support to ensure skills translate into real-world results.</li>
-                <li>Focus on sustainability and innovation, supporting Oman Vision 2040.</li>
-              </ul>
-            </div>
-          </motion.section> */}
         </section>
       </div>
       <Footer />

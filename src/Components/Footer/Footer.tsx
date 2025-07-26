@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="container mx-auto my-1 pt-3">
       <div className="bg-[#f8fafe] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-10 px-12 py-6 rounded-3xl items-center justify-center ">
         <div className="flex flex-col items-center lg:items-start gap-5">
-          <img src="/Images/innovexlogo2.png" alt="footer lgo" className="h-32 w-32" />
+          <img src="/Images/logogroup2.png" alt="footer lgo" className="h-12 w-32" />
           {/* <p className="text-center lg:text-start">Adrees of the INNOVEX company
             768k AB street , building no 4
           </p> */}

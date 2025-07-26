@@ -1,196 +1,183 @@
-"use client";
+"use client"
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { ChevronDownIcon } from '@heroicons/react/24/solid';
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import menuData from "./menuData";
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
 
-const Header = () => {
-  // Navbar toggle
-  const [navbarOpen, setNavbarOpen] = useState(false);
-  const navbarToggleHandler = () => {
-    setNavbarOpen(!navbarOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleDropdown = (menu: string) => setDropdownOpen(dropdownOpen === menu ? null : menu);
 
-  // Sticky Navbar
-  const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-    return () => {
-      window.removeEventListener("scroll", handleStickyNavbar);
-    };
-  }, []);
+  const itServices = [
+    'AI ML', 'Cyber Security', 'IT Consulting', 'Software Development', 
+    'Database Services', 'ERP Implementation', 'Data Engineering', 
+    'SQL & Database Optimization', 'Custom Reporting', 'Application Reformation', 
+    'IT Infrastructure Management', 'Data Analytics & Visualization', 'Data Security', 'DevOps'
+  ];
 
-  // Submenu handler
-  const [openIndex, setOpenIndex] = useState(-1);
-  const handleSubmenu = (index: number) => {
-    if (openIndex === index) {
-      setOpenIndex(-1);
-    } else {
-      setOpenIndex(index);
-    }
-  };
-
-  const usePathName = usePathname();
-
-  const closeNavbarOnScroll = () => {
-    setNavbarOpen(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", closeNavbarOnScroll);
-    return () => {
-      window.removeEventListener("scroll", closeNavbarOnScroll);
-    };
-  }, []);
+  const industrialEngineering = [
+    'Industrial Designing', 'Prototyping', 'Manufacturing Expertise'
+  ];
 
   return (
-    <>
-      <header
-        className={`header left-0 top-0 z-40 flex w-full items-center h-24 pb-2 ${
-          sticky
-            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "absolute bg-white shadow-sticky backdrop-blur-sm"
-        }`}
-      >
-        <div className="container mx-auto px-8 xl:px-20">
-          <div className="relative flex items-center justify-between">
-            <div className="w-38 pt-8 max-w-full">
-              <Link
-                href="/"
-                className={`header-logo block w-full ${sticky ? "py-2 lg:py-2" : "py-8"}`}
+    <nav className="bg-white text-black sticky top-0 z-50 shadow-lg">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link href="/">
+              <img
+                src="/Images/logogroup2.png"
+                alt="Company Logo"
+                className="h-24 w-40 object-contain"
+              />
+            </Link>
+          </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="hover:text-blue-400 transition-colors">Home</Link>
+            <Link href="/about" className="hover:text-blue-400 transition-colors">About</Link>
+
+            {/* IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('itServices')}
+                className="flex items-center hover:text-blue-400 transition-colors focus:outline-none"
               >
-                <Image
-                  src="/Images/innovexlogo2.png"
-                  alt="logo"
-                  width={250}
-                  height={90}
-                  className="w-full"
-                />
-              </Link>
+                IT Services
+                <ChevronDownIcon className={`ml-1 h-5 w-5 transform ${dropdownOpen === 'itServices' ? 'rotate-180' : ''}`} />
+              </button>
+              {dropdownOpen === 'itServices' && (
+                <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 max-h-96 overflow-y-auto">
+                  {itServices.map((item) => (
+                    <Link
+                      key={item}
+                      href={`/it-services/${item.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')}`}
+                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-400 transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
 
-            <div className="flex items-center justify-end">
-              <div>
-                <button
-                  onClick={navbarToggleHandler}
-                  id="navbarToggler"
-                  aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
-                >
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
-                      navbarOpen ? "top-[7px] rotate-45" : ""
-                    }`}
-                  />
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
-                      navbarOpen ? "opacity-0" : ""
-                    }`}
-                  />
-                  <span
-                    className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
-                      navbarOpen ? "top-[-8px] -rotate-45" : ""
-                    }`}
-                  />
-                </button>
-                <nav
-                  id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
-                    navbarOpen ? "visibility top-full opacity-100" : "invisible top-[120%] opacity-0"
-                  }`}
-                >
-                  <ul className="block lg:flex lg:space-x-12">
-                    {menuData.map((menuItem, index) => (
-                      <li key={index} className="group relative">
-                        {menuItem.path ? (
-                          <Link
-                            href={menuItem.path}
-                            className={`flex py-2 text-lg lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-                              usePathName === menuItem.path
-                                ? "text-primary"
-                                : ` ${
-                                    !sticky && usePathName.includes("/services/webdevelopment")
-                                      ? "text-black"
-                                      : ""
-                                  } hover:cursor-pointer`
-                            }`}
-                          >
-                            {menuItem.title}
-                          </Link>
-                        ) : (
-                          <>
-                            <p
-                              onClick={() => handleSubmenu(index)}
-                              className={`${
-                                !sticky && usePathName.includes("/services/webdevelopment")
-                                  ? "text-black"
-                                  : ""
-                              } flex cursor-pointer  items-center justify- justify-between py-2 text-lg text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6`}
-                            >
-                              {menuItem.title}
-                              <span className="pl-3">
-                                <svg width="25" height="24" viewBox="0 0 25 24">
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M6.29289 8.8427C6.68342 8.45217 7.31658 8.45217 7.70711 8.8427L12 13.1356L16.2929 8.8427C16.6834 8.45217 17.3166 8.45217 17.7071 8.8427C18.0976 9.23322 18.0976 9.86639 17.7071 10.2569L12 15.964L6.29289 10.2569C5.90237 9.86639 5.90237 9.23322 6.29289 8.8427Z"
-                                    fill="currentColor"
-                                  />
-                                </svg>
-                              </span>
-                            </p>
-                            <div
-                              className={`bg-white flex gap-4 text-lg submenu relative left-0 top-full rounded-2xl transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:flex lg:w-max lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
-                                openIndex === index ? "block" : "hidden"
-                              }`}
-                            >
-                              <div className="text-gray-700">
-                                {menuItem.submenu &&
-                                  menuItem.submenu.slice(0, 8).map((submenuItem, index) => (
-                                    <Link
-                                      href={submenuItem.path ?? "/"}
-                                      key={index}
-                                      className="block rounded py-2.5 text-sm arrow-svg text-dark hover:text-blue-800 lg:px-3"
-                                    >
-                                      {submenuItem.title}
-                                    </Link>
-                                  ))}
-                              </div>
-                              <div className="text-gray-700">
-                                {menuItem.submenu &&
-                                  menuItem.submenu.slice(8).map((submenuItem, index) => (
-                                    <Link
-                                      href={submenuItem.path ?? "/"}
-                                      key={index}
-                                      className="block rounded py-2.5 text-sm arrow-svg text-dark hover:text-blue-800 lg:px-3"
-                                    >
-                                      {submenuItem.title}
-                                    </Link>
-                                  ))}
-                              </div>
-                            </div>
-                          </>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              </div>
+            {/* Industrial Engineering Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('industrialEngineering')}
+                className="flex items-center hover:text-blue-400 transition-colors focus:outline-none"
+              >
+                Industrial Engineering
+                <ChevronDownIcon className={`ml-1 h-5 w-5 transform ${dropdownOpen === 'industrialEngineering' ? 'rotate-180' : ''}`} />
+              </button>
+              {dropdownOpen === 'industrialEngineering' && (
+                <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2">
+                  {industrialEngineering.map((item) => (
+                    <Link
+                      key={item}
+                      href={`/industrial-engineering/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="block px-4 py-2 text-sm hover:bg-gray-700 hover:text-blue-400 transition-colors"
+                    >
+                      {item}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
+
+            <Link href="/services/business-development" className="hover:text-blue-400 transition-colors">Business Development</Link>
+            <Link href="/services/training" className="hover:text-blue-400 transition-colors">Training</Link>
+            <Link href="/smart-home" className="hover:text-blue-400 transition-colors">Smart Home</Link>
+            <Link href="/electric-work" className="hover:text-blue-400 transition-colors">Electric Work</Link>
+            <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            >
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-6 w_characteristics-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
-      </header>
-    </>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-gray-800">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link href="/" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Home</Link>
+            <Link href="/about" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">About</Link>
+
+            {/* IT Services Mobile Dropdown */}
+            <button
+              onClick={() => toggleDropdown('itServices')}
+              className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400 flex items-center justify-between"
+            >
+              IT Services
+              <ChevronDownIcon className={`h-5 w-5 transform ${dropdownOpen === 'itServices' ? 'rotate-180' : ''}`} />
+            </button>
+            {dropdownOpen === 'itServices' && (
+              <div className="pl-4 space-y-1">
+                {itServices.map((item) => (
+                  <Link
+                    key={item}
+                    href={`/it-services/${item.toLowerCase().replace(/ & /g, '-').replace(/\s+/g, '-')}`}
+                    className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400 text-sm"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* Industrial Engineering Mobile Dropdown */}
+            <button
+              onClick={() => toggleDropdown('industrialEngineering')}
+              className="w-full text-left px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400 flex items-center justify-between"
+            >
+              Industrial Engineering
+              <ChevronDownIcon className={`h-5 w-5 transform ${dropdownOpen === 'industrialEngineering' ? 'rotate-180' : ''}`} />
+            </button>
+            {dropdownOpen === 'industrialEngineering' && (
+              <div className="pl-4 space-y-1">
+                {industrialEngineering.map((item) => (
+                  <Link
+                    key={item}
+                    href={`/industrial-engineering/${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400 text-sm"
+                  >
+                    {item}
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <Link href="/services/business-development" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Business Development</Link>
+            <Link href="/services/training" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Training</Link>
+            <Link href="/smart-home" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Smart Home</Link>
+            <Link href="/electric-work" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Electric Work</Link>
+            <Link href="/contact" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Contact Us</Link>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;

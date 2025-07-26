@@ -47,7 +47,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full max-w-full py-8" data-carousel="slide">
+    <div className="relative w-full max-w-full py-2" data-carousel="slide">
       {/* Carousel wrapper */}
       <div className="relative h-[90vh] sm:h-[90vh] md:h-[90vh] overflow-hidden rounded-lg">
         {slides.map((slide, index) => (

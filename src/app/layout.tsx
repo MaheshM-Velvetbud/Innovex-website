@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "INNOVEX",
+  title: "innovex group",
   description: "",
 };
 
