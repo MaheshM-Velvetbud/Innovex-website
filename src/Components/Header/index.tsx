@@ -20,9 +20,9 @@ const Navbar = () => {
   const industrialEngineering = [
     'Industrial Designing', 'Prototyping', 'Manufacturing Expertise'
   ];
-  const Smarthome = [
-    ' Control of Lights & ACs', 'Curtain Motors ',' CCTV', ' Intercome', ' Sound system', ' Fire system', ' building network', '  Security system'
-  ];
+  // const Smarthome = [
+  //   ' Control of Lights & ACs', 'Curtain Motors ',' CCTV', ' Intercome', ' Sound system', ' Fire system', ' building network', '  Security system'
+  // ];
 
   return (
     <nav className="bg-white text-black sticky top-0 z-50 shadow-lg">
@@ -92,7 +92,7 @@ const Navbar = () => {
               )}
             </div>
              {/* Smart Homes Dropdown */}
-             <div className="relative">
+             {/* <div className="relative">
               <button
                 onClick={() => toggleDropdown('Smarthome')}
                 className="flex items-center hover:text-blue-400 transition-colors focus:outline-none"
@@ -113,11 +113,11 @@ const Navbar = () => {
                   ))}
                 </div>
               )}
-            </div>
+            </div> */}
 
             <Link href="/services/business-development" className="hover:text-blue-400 transition-colors">Business Development</Link>
             <Link href="/services/training" className="hover:text-blue-400 transition-colors">Training</Link>
-            {/* <Link href="/smart-home" className="hover:text-blue-400 transition-colors">Smart Home</Link> */}
+            <Link href="/smart-home" className="hover:text-blue-400 transition-colors">Smart Home</Link>
             <Link href="/electric-work" className="hover:text-blue-400 transition-colors">Electric Work</Link>
             <Link href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</Link>
           </div>
@@ -198,6 +198,7 @@ const Navbar = () => {
             <Link href="/services/training" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Training</Link>
             <Link href="/smart-home" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Smart Home</Link>
             <Link href="/electric-work" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Electric Work</Link>
+            
             <Link href="/contact" className="block px-3 py-2 rounded-md hover:bg-gray-700 hover:text-blue-400">Contact Us</Link>
           </div>
         </div>

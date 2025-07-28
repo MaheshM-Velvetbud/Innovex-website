@@ -48,25 +48,31 @@ const menuData: Menu[] = [
       },
     ],
   },
+  // {
+  //   id: 2,
+  //   title: "IT Services",
+  //   newTab: false,
+  //   submenu: [
+  //     // s
+  //     {
+  //       id: 23,
+  //       title: "AI & ML",
+  //       path: "/ai",
+  //       newTab: false,
+  //     },
+  //     {
+  //       id: 23,
+  //       title: "Cyber security",
+  //       path: "/services/cybersecurity",
+  //       newTab: false,
+  //     },
+  //   ],
+  // },
   {
-    id: 2,
+    id: 3,
     title: "IT Services",
+    path: "/services/business-development",
     newTab: false,
-    submenu: [
-      // s
-      {
-        id: 23,
-        title: "AI & ML",
-        path: "/ai",
-        newTab: false,
-      },
-      {
-        id: 23,
-        title: "Cyber security",
-        path: "/services/cybersecurity",
-        newTab: false,
-      },
-    ],
   },
   {
     id: 3,
@@ -77,6 +83,18 @@ const menuData: Menu[] = [
   {
     id: 3,
     title: "Training",
+    path: "/services/training",
+    newTab: false,
+  },
+  {
+    id: 3,
+    title: "Smart Homes",
+    path: "/services/training",
+    newTab: false,
+  },
+  {
+    id: 3,
+    title: "Electric work",
     path: "/services/training",
     newTab: false,
   },

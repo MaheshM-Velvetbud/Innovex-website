@@ -50,7 +50,7 @@ const Cybersecurity = () => {
               href="/"
               className="mt-6 inline-block bg-[#0c7c94] text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition-colors duration-300"
             >
-              Back to Services
+              Back to Home
             </Link>
           </motion.section>
 
