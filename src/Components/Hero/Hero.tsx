@@ -8,22 +8,22 @@ const Carousel = () => {
   const slides = [
    
     {
-      src: 'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-      title: 'Design & Prototype with Precision',
-      description: 'Create innovative, user-centered product designs and validate them with rapid prototyping to bring your ideas to life with precision and creativity.',
-      link: '/services/industrial-designing',
+      src: 'https://images.unsplash.com/photo-1692607431253-8225c0e89f7d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Ds',
+      title: 'INDUSTRIAL ENGINEERING SOLUTION',
+      description: 'Delivering comprehensive electrical and energy distribution, innovative industrial engineering and product development, and versatile general trading services',
+      link: '/services/industrial-engineering',
     },
     {
-      src: '/Images/ML.jpg',
-      title: 'Innovate with Technical Consultancy & AI/ML',
-      description: 'Drive business transformation with our expert technical consultancy and AI/ML solutions, leveraging predictive analytics, automation, and tailored strategies.',
-      link: '/ai',
+      src: 'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: ' BUSINESS TRANSFORMATION & DIGITALIZATION',
+      description: 'Driving growth through cutting-edge IT and digital transformation, innovative smart home and building automation solutions, and strategic digital marketing services.',
+      link: '/services/business-development',
     },
     {
-      src: '/Images/enginerbg.jpg',
-      title: 'Seamless Transition to Manufacturing',
-      description: 'Move from prototype to production with our strategic manufacturing solutions, sourcing machinery and ensuring market-ready success.',
-      link: '/services/link',
+      src: '/Images/statergeicbg.jpg',
+      title: 'STRATEGY & DEVELOPMENT SERVICES',
+      description: 'Empowering success through expert business and strategic consulting, alongside impactful training and capability building solutions',
+      link: '/it-services/ai-ml',
     },
   ];
 
